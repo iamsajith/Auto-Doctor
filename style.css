@@ -102,7 +102,6 @@ form.sign-in-form {
   font-weight: 500;
 }
 
-
 .btn {
   width: 150px;
   background-color: #5995fd;
@@ -368,4 +367,14 @@ form.sign-in-form {
     bottom: 28%;
     left: 50%;
   }
+}
+
+small {
+  font-size: x-small;
+}
+.error {
+  color: red;
+}
+.success {
+  visibility: hidden;
 }

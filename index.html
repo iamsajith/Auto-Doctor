@@ -14,37 +14,39 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="carhealth.html" class="sign-in-form">
+          <form action="carhealth.html" onsubmit="return checkInputs(redirect)" class="sign-in-form" id="smt">
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-car"></i>
-              <input type="number" placeholder="Vehicle ID" />
+              <input type="number" placeholder="Vehicle ID" id="v-id" />
             </div>
+            <small id="change1" style="text-align: center"></small>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Password" id="password" />
             </div>
-            <input type="submit" value="Login" class="btn solid" />
+            <small id="change2" style="text-align: center"></small>
+            <input type="submit" value="Login" id="login" class="btn solid" />
           </form>
-          <form action="#" class="sign-up-form">
-            <h2 class="title">Sign up</h2>
-            <div class="input-field">
-             <i class="fas fa-car"></i>
-             <input type="number" placeholder="Vehicle ID" />
-           </div>
+          <form action="carhealth.html" class="sign-up-form">
+            <h2 class="title">Register</h2>
+          <div class="input-field">
+            <i class="fas fa-car"></i>
+            <input type="number" placeholder="Vehicle ID" id="vehicle"/>
+          </div>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" placeholder="Username" id="username" />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
+              <input type="email" placeholder="Email" id="email"/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Password" id="password"/>
             </div>
-            <input type="submit" class="btn" value="Register" />
+            <input type="submit" class="btn" value="Register" id="register" />
           </form>
         </div>
       </div>
@@ -57,7 +59,7 @@
             Set up a real time vehicle monitoring system with us
             </p>
             <button class="btn transparent" id="sign-up-btn">
-              Sign up
+              Register
             </button>
           </div>
           <img src="./Assets/undraw_electric_car_b-7-hl.svg" class="image" alt="" />
@@ -76,7 +78,8 @@
         </div>
       </div>
     </div>
-
     <script src="app.js"></script>
+    <script src="validate.js"></script>
+
   </body>
 </html>
