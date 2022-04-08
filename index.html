@@ -1,85 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="style.css" />
-    <title>Auto Doctor</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="forms-container">
-        <div class="signin-signup">
-          <form action="carhealth.html" onsubmit="return checkInputs(redirect)" class="sign-in-form" id="smt">
-            <h2 class="title">Sign in</h2>
-            <div class="input-field">
-              <i class="fas fa-car"></i>
-              <input type="number" placeholder="Vehicle ID" id="v-id" />
-            </div>
-            <small id="change1" style="text-align: center"></small>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" id="password" />
-            </div>
-            <small id="change2" style="text-align: center"></small>
-            <input type="submit" value="Login" id="login" class="btn solid" />
-          </form>
-          <form action="carhealth.html" class="sign-up-form">
-            <h2 class="title">Register</h2>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>Auto Doctor</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="forms-container">
+      <div class="signin-signup">
+        <form action="carhealth.html" onsubmit="return checkInputs(redirect)" class="sign-in-form" id="smt">
+          <h2 class="title">Sign in</h2>
           <div class="input-field">
             <i class="fas fa-car"></i>
-            <input type="number" placeholder="Vehicle ID" id="vehicle"/>
+            <input type="number" placeholder="Vehicle ID" id="v-id" />
           </div>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" id="username" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" id="email"/>
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" id="password"/>
-            </div>
-            <input type="submit" class="btn" value="Register" id="register" />
-          </form>
-        </div>
-      </div>
-
-      <div class="panels-container">
-        <div class="panel left-panel">
-          <div class="content">
-            <h3>Just bought a new vehicle?</h3>
-            <p>
-            Set up a real time vehicle monitoring system with us
-            </p>
-            <button class="btn transparent" id="sign-up-btn">
-              Register
-            </button>
+          <small id="change1" style="text-align: center"></small>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" id="password" />
           </div>
-          <img src="./Assets/undraw_electric_car_b-7-hl.svg" class="image" alt="" />
-        </div>
-        <div class="panel right-panel">
-          <div class="content">
-            <h3>Already user ?</h3>
-            <p>
-              Check overall health report of your vehicle
-            </p>
-            <button class="btn transparent" id="sign-in-btn">
-              Sign in
-            </button>
+          <small id="change2" style="text-align: center"></small>
+          <input type="submit" value="Login" id="login" class="btn solid" />
+        </form>
+        <form action="carhealth.html" class="sign-up-form">
+          <h2 class="title">Register</h2>
+          <div class="input-field">
+            <i class="fas fa-car"></i>
+            <input type="number" placeholder="Vehicle ID" id="vehicle" />
           </div>
-          <img src="./Assets/undraw_electric_car_b-7-hl.svg" class="image" alt="" />
-        </div>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username" id="username" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="Email" id="email" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" id="password" />
+          </div>
+          <input type="submit" class="btn" value="Register" id="register" />
+        </form>
       </div>
     </div>
-    <script src="app.js"></script>
-    <script src="validate.js"></script>
 
-  </body>
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <h3>Just bought a new vehicle?</h3>
+          <p>
+            Set up a real time vehicle monitoring system with us
+          </p>
+          <button class="btn transparent" id="sign-up-btn">
+            Register
+          </button>
+        </div>
+        <img src="./Assets/undraw_electric_car_b-7-hl.svg" class="image" alt="" />
+      </div>
+      <div class="panel right-panel">
+        <div class="content">
+          <h3>Already user ?</h3>
+          <p>
+            Check overall health report of your vehicle
+          </p>
+          <button class="btn transparent" id="sign-in-btn">
+            Sign in
+          </button>
+        </div>
+        <img src="./Assets/undraw_electric_car_b-7-hl.svg" class="image" alt="" />
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+  <script src="validate.js"></script>
+
+</body>
+
 </html>
