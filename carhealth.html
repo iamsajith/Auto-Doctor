@@ -1,50 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-  <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="dashboard.css">
-  <title>Dashboard</title>
-</head>
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="dashboard.css" />
 
-<body>
-  <nav class="navbar navbar-expand-sm navbar-light">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Log Out</a>
+    <!----===== Iconscout CSS ===== -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <!--<title>Admin Dashboard Panel</title>-->
+  </head>
+  <body>
+    <nav>
+      <div class="logo-name">
+        <div class="logo-image">
+          <img src="Assets/logo.png" alt="" />
+        </div>
+
+        <span class="logo_name">Auto Doctor</span>
+      </div>
+
+      <div class="menu-items">
+        <ul class="nav-links">
+          <li>
+            <a href="#overview">
+              <i class="uil uil-estate"></i>
+              <span class="link-name">Dahsboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#analytics">
+              <i class="uil uil-chart"></i>
+              <span class="link-name">Analytics</span>
+            </a>
+          </li>
+          <li>
+            <a href="#activity">
+              <i class="uil uil-history"></i>
+              <span class="link-name">Recent Activity</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="logout-mode">
+          <li>
+            <a href="index.html">
+              <i class="uil uil-signout"></i>
+              <span class="link-name">Logout</span>
+            </a>
+          </li>
+
+          <li class="mode">
+            <a href="#">
+              <i class="uil uil-moon"></i>
+              <span class="link-name">Dark Mode</span>
+            </a>
+
+            <div class="mode-toggle">
+              <span class="switch"></span>
+            </div>
           </li>
         </ul>
       </div>
-    </div>
-  </nav>
-  <div class="container">
-    <div class="row">
-    </div>
-  </div>
-  </div>
-  <div class="text-center">
-    <button type="button" class="p-3 rounded-circle" id="float">
-      <i class="fas fa-redo" style="font-size:30px;"></i>
-  </div>
+    </nav>
 
-  </button>
-  </div>
-</body>
+    <section class="dashboard">
+      <div class="top">
+        <i class="uil uil-bars sidebar-toggle"></i>
 
+        <div class="search-box">
+          <i class="uil uil-search"></i>
+          <input type="text" placeholder="Search here..." />
+        </div>
+
+        <!--<img src="images/profile.jpg" alt="">-->
+      </div>
+
+      <div class="dash-content">
+        <div class="overview">
+          <div class="title" id="overview">
+            <i class="uil uil-tachometer-fast-alt"></i>
+            <span class="text">Dashboard</span>
+          </div>
+
+          <div class="boxes">
+            <div class="box box1">
+              <i class="uil uil-thumbs-up"></i>
+              <span class="text">Overall Health</span>
+              <span class="number">Good</span>
+            </div>
+            <div class="box box2">
+              <i class="uil uil-map-marker"></i>
+              <span class="text">Location</span>
+              <span class="number">Mannarkkad, Palakkad</span>
+            </div>
+          </div>
+        </div>
+        <div class="analytics">
+          <div class="title">
+            <i class="uil uil-chart"></i>
+            <span class="text" id="analytics">Analytics</span>
+          </div>
+        <div class="pie-chart">
+          <div class="pie animate no-round" style="--p:80;--c:orange;">Coolant <br> 80%</div>
+          <div class="pie animate no-round" style="--p:80;--c:orange;"> 80%</div>
+          <div class="pie animate no-round" style="--p:80;--c:orange;"> 80%</div>
+        </div>
+        </div>
+
+        <div class="activity" id="activity">
+          <div class="title">
+            <i class="uil uil-history"></i>
+            <span class="text">Recent Activity</span>
+          </div>
+
+          <div class="activity-data" style="text-align: start;">
+            <div class="data names">
+              <span class="data-title">Sensor</span>
+              <span class="data-list">Coolant Quality</span>
+              <span class="data-list">Oil Quality</span>
+              <span class="data-list">Oil Level</span>
+              <span class="data-list">Vibration</span>
+              <span class="data-list">Location</span>
+            </div>
+            <div class="data email">
+              <span class="data-title">Date&Time</span>
+              <span class="data-list">24-04-2022 , 12.39</span>
+              <span class="data-list">24-04-2022 , 12.39</span>
+              <span class="data-list">24-04-2022 , 12.39</span>
+              <span class="data-list">24-04-2022 , 12.39</span>
+              <span class="data-list">24-04-2022 , 12.39</span>
+            </div>
+            <div class="data joined">
+              <span class="data-title">Value</span>
+              <span class="data-list">xxxx</span>
+              <span class="data-list">xxxx</span>
+              <span class="data-list">xxxx</span>
+              <span class="data-list">xxxx</span>
+              <span class="data-list">xxxx</span>
+            </div>
+            <!-- <div class="data type">
+              <span class="data-title">Type</span>
+              <span class="data-list">Updated</span>
+              <span class="data-list">Member</span>
+              <span class="data-list">Member</span>
+              <span class="data-list">New</span>
+              <span class="data-list">Member</span>
+            </div> -->
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="dash.js"></script>
+  </body>
 </html>
