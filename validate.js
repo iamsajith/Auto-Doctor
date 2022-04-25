@@ -54,3 +54,4 @@ var setSuccessFor1 = () => {
 var setSuccessFor2 = () => {
   document.getElementsByTagName("small")[1].className = "success";
 };
+

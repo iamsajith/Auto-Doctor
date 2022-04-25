@@ -229,6 +229,19 @@ body.dark .switch:before {
     left: 20px;
 }
 
+.activity{
+   display: none;
+}
+.activity.new{
+    display: block;
+}
+.myveh{
+display: none;
+}
+.myveh.new{
+    display: block;
+}
+
 .dashboard {
     position: relative;
     left: 250px;
@@ -315,7 +328,6 @@ nav.close~.dashboard .top {
     align-items: center;
     margin: 60px 0 30px 0;
 }
-
 .dash-content .title i {
     position: relative;
     height: 35px;
@@ -339,10 +351,20 @@ nav.close~.dashboard .top {
 .dash-content .boxes {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
+table{
+    width: 100%;
+    
+}
+th,td{
+    border: 1px solid black;
+}
+td{
+    padding: 2%;
+}
 .dash-content .boxes .box {
     display: flex;
     flex-direction: column;
@@ -350,6 +372,18 @@ nav.close~.dashboard .top {
     border-radius: 12px;
     width: calc(100% / 2 - 15px);
     padding: 15px 20px;
+    background-color: var(--box1-color);
+    transition: var(--tran-05);
+}
+
+.dash-content .boxes .box-new {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    width: calc(100% / 2 - 15px);
+   /* padding:15px 20px; */
     background-color: var(--box1-color);
     transition: var(--tran-05);
 }
@@ -380,35 +414,27 @@ nav.close~.dashboard .top {
     background-color: var(--box3-color);
 }
 
-.dash-content .activity .activity-data {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
 
-.activity .activity-data {
-    display: flex;
-}
-
-.activity-data .data {
+.data {
     display: flex;
     flex-direction: column;
     margin: 0 15px;
 }
 
-.activity-data .data-title {
+.data-title {
     font-size: 20px;
     font-weight: 500;
     color: var(--text-color);
+    padding-bottom: 10px
 }
 
-.activity-data .data .data-list {
+.data .data-list {
     font-size: 18px;
     font-weight: 400;
     margin-top: 20px;
     white-space: nowrap;
     color: var(--text-color);
+    padding: 5%;
 }
 
 @media (max-width: 1000px) {
@@ -555,8 +581,8 @@ nav.close~.dashboard .top {
     place-content: center;
     font-size: 15px;
     font-weight: bold;
-    font-family: sans-serif;
     text-align: center;
+    color: var(--text-color);
 }
 
 .pie:before,

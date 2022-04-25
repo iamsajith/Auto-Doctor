@@ -8,13 +8,18 @@
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="dashboard.css" />
 
+
+    <!----===== Font Awesome ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    
+
     <!----===== Iconscout CSS ===== -->
     <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
 
-    <!--<title>Admin Dashboard Panel</title>-->
+    <!-- <title>Admin Dashboard Panel</title> -->
   </head>
   <body>
     <nav>
@@ -40,10 +45,16 @@
               <span class="link-name">Analytics</span>
             </a>
           </li>
-          <li>
+          <li id="vehicle">
+            <a href="#myvehicle">
+              <i class="uil uil-car"></i>
+              <span class="link-name">My Vehicle</span>
+            </a>
+          </li>
+          <li id="log">
             <a href="#activity">
               <i class="uil uil-history"></i>
-              <span class="link-name">Recent Activity</span>
+              <span class="link-name"><button  style="border: none; background-color: transparent;"></button>Recent Activity</button></span>
             </a>
           </li>
         </ul>
@@ -78,8 +89,6 @@
           <i class="uil uil-search"></i>
           <input type="text" placeholder="Search here..." />
         </div>
-
-        <!--<img src="images/profile.jpg" alt="">-->
       </div>
 
       <div class="dash-content">
@@ -88,9 +97,8 @@
             <i class="uil uil-tachometer-fast-alt"></i>
             <span class="text">Dashboard</span>
           </div>
-
           <div class="boxes">
-            <div class="box box1">
+            <div class="box box2">
               <i class="uil uil-thumbs-up"></i>
               <span class="text">Overall Health</span>
               <span class="number">Good</span>
@@ -107,55 +115,123 @@
             <i class="uil uil-chart"></i>
             <span class="text" id="analytics">Analytics</span>
           </div>
-        <div class="pie-chart">
-          <div class="pie animate no-round" style="--p:80;--c:orange;">Coolant <br> 80%</div>
-          <div class="pie animate no-round" style="--p:80;--c:orange;"> 80%</div>
-          <div class="pie animate no-round" style="--p:80;--c:orange;"> 80%</div>
+        <div class="pie-chart" style="overflow-x:auto;">
+          <div class="pie animate no-round" style="--p:80;--c:orange;">Coolant Quality <br> 80%</div>
+          <div class="pie animate no-round" style="--p:80;--c:orange;">Oil Quality <br> 80%</div>
+          <div class="pie animate no-round" style="--p:80;--c:orange;">Oil Level <br> 80%</div>
         </div>
         </div>
-
+        <div class="myveh" id="myvehicle">
+          <div class="title">
+            <i class="uil uil-car"></i>
+            <span class="text" id="analytics">My Vehicle Info</span>
+          </div>
+              <div style="overflow-x:auto;">
+                <table style="text-align: center;"> 
+                  <tr id="basic-info">
+                    <td class="data-list">Maker</td>
+                    <td class="data-list">Model</td>
+                  </tr>
+                  <tr id="oil-quality">
+                    <td class="data-list">Model</td>
+                    <td class="data-list">Jackson</td>
+                  </tr>
+                  <tr id="oil level">
+                    <td class="data-list">Year</td>
+                    <td class="data-list">Johnson</td>
+                  </tr>
+                  <tr id="vibration">
+                    <td class="data-list">Color</td>
+                    <td class="data-list">Johnson</td>
+                  </tr>
+                  <tr id="location">
+                    <td class="data-list">Owner Name</td>
+                    <td class="data-list">Johnson</td>
+                  </tr>
+                  <tr id="basic-info">
+                    <td class="data-list">Reg.No</td>
+                    <td class="data-list">Model</td>
+                  </tr>
+                  <tr id="coolant-quality">
+                    <td class="data-list">State of Reg</td>
+                    <td class="data-list">Smith</td>
+                  </tr>
+                  <tr id="oil-quality">
+                    <td class="data-list">VIN Number</td>
+                    <td class="data-list">Jackson</td>
+                  </tr>
+                  <tr id="oil level">
+                    <td class="data-list">Location</td>
+                    <td class="data-list">Johnson</td>
+                  </tr>
+                  <tr id="vibration">
+                    <td class="data-list">Ownership Status</td>
+                    <td class="data-list">Johnson</td>
+                  </tr>
+                  <tr id="location">
+                    <td class="data-list">Insurance Company</td>
+                    <td class="data-list">Johnson</td>
+                  </tr>
+                  <tr id="location">
+                    <td class="data-list">Number of Accidents</td>
+                    <td class="data-list">Johnson</td>
+                  </tr>
+                </table>
+              </div>
+          </div>
         <div class="activity" id="activity">
           <div class="title">
             <i class="uil uil-history"></i>
             <span class="text">Recent Activity</span>
           </div>
 
-          <div class="activity-data" style="text-align: start;">
-            <div class="data names">
-              <span class="data-title">Sensor</span>
-              <span class="data-list">Coolant Quality</span>
-              <span class="data-list">Oil Quality</span>
-              <span class="data-list">Oil Level</span>
-              <span class="data-list">Vibration</span>
-              <span class="data-list">Location</span>
-            </div>
-            <div class="data email">
-              <span class="data-title">Date&Time</span>
-              <span class="data-list">24-04-2022 , 12.39</span>
-              <span class="data-list">24-04-2022 , 12.39</span>
-              <span class="data-list">24-04-2022 , 12.39</span>
-              <span class="data-list">24-04-2022 , 12.39</span>
-              <span class="data-list">24-04-2022 , 12.39</span>
-            </div>
-            <div class="data joined">
-              <span class="data-title">Value</span>
-              <span class="data-list">xxxx</span>
-              <span class="data-list">xxxx</span>
-              <span class="data-list">xxxx</span>
-              <span class="data-list">xxxx</span>
-              <span class="data-list">xxxx</span>
-            </div>
-            <!-- <div class="data type">
-              <span class="data-title">Type</span>
-              <span class="data-list">Updated</span>
-              <span class="data-list">Member</span>
-              <span class="data-list">Member</span>
-              <span class="data-list">New</span>
-              <span class="data-list">Member</span>
-            </div> -->
+          <div style="overflow-x:auto;">
+            <table style="text-align: center;">
+              <thead>
+                <tr>
+                  <th class="data-title">Sensor</th>
+                  <th class="data-title">Date&Time</th>
+                  <th class="data-title">Value</th>
+                  <th class="data-title">Status</th>
+                </tr>
+              </thead>
               
-            </div>
+              <tr id="coolant-quality">
+                <td class="data-list">Jill</td>
+                <td class="data-list">Smith</td>
+                <td class="data-list">50</td>
+                <td class="data-list">50</td>
+              </tr>
+              <tr id="oil-quality">
+                <td class="data-list">Eve</td>
+                <td class="data-list">Jackson</td>
+                <td class="data-list">94</td>
+                <td class="data-list">94</td>
+              </tr>
+              <tr id="oil level">
+                <td class="data-list">Adam</td>
+                <td class="data-list">Johnson</td>
+                <td class="data-list">67</td>
+                <td class="data-list">67</td>
+              </tr>
+              <tr id="vibration">
+                <td class="data-list">Adam</td>
+                <td class="data-list">Johnson</td>
+                <td class="data-list">67</td>
+                <td class="data-list">67</td>
+              </tr>
+              <tr id="location">
+                <td class="data-list">Adam</td>
+                <td class="data-list">Johnson</td>
+                <td class="data-list">67</td>
+                <td class="data-list">67</td>
+              </tr>
+            </table>
           </div>
+          
+
+          </div>
+
         </div>
       </div>
     </section>
