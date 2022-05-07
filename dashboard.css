@@ -357,10 +357,12 @@ nav.close~.dashboard .top {
 
 table{
     width: 100%;
+    color: var(--text-color);
+    
     
 }
 th,td{
-    border: 1px solid black;
+    border: 1px solid
 }
 td{
     padding: 2%;
@@ -570,7 +572,7 @@ td{
 .pie {
     --p: 20;
     --b: 12px;
-    --c: darkred;
+    --c: #EAEA7F;
     --w: 200px;
 
     width: var(--w);

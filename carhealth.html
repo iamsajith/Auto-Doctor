@@ -1,241 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!----======== CSS ======== -->
-    <link rel="stylesheet" href="dashboard.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!----======== CSS ======== -->
+  <link rel="stylesheet" href="dashboard.css" />
 
 
-    <!----===== Font Awesome ===== -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    
+  <!----===== Iconscout CSS ===== -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 
-    <!----===== Iconscout CSS ===== -->
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-    />
+  <!-- <title>Admin Dashboard Panel</title> -->
+</head>
 
-    <!-- <title>Admin Dashboard Panel</title> -->
-  </head>
-  <body>
-    <nav>
-      <div class="logo-name">
-        <div class="logo-image">
-          <img src="Assets/logo.png" alt="" />
-        </div>
-
-        <span class="logo_name">Auto Doctor</span>
+<body>
+  <nav>
+    <div class="logo-name">
+      <div class="logo-image">
+        <img src="Assets/logo.png" alt="" />
       </div>
 
-      <div class="menu-items">
-        <ul class="nav-links">
-          <li>
-            <a href="#overview">
-              <i class="uil uil-estate"></i>
-              <span class="link-name">Dahsboard</span>
-            </a>
-          </li>
-          <li>
-            <a href="#analytics">
-              <i class="uil uil-chart"></i>
-              <span class="link-name">Analytics</span>
-            </a>
-          </li>
-          <li id="vehicle">
-            <a href="#myvehicle">
-              <i class="uil uil-car"></i>
-              <span class="link-name">My Vehicle</span>
-            </a>
-          </li>
-          <li id="log">
-            <a href="#activity">
-              <i class="uil uil-history"></i>
-              <span class="link-name"><button  style="border: none; background-color: transparent;"></button>Recent Activity</button></span>
-            </a>
-          </li>
-        </ul>
+      <span class="logo_name">Auto Doctor</span>
+    </div>
 
-        <ul class="logout-mode">
-          <li>
-            <a href="index.html">
-              <i class="uil uil-signout"></i>
-              <span class="link-name">Logout</span>
-            </a>
-          </li>
-
-          <li class="mode">
-            <a href="#">
-              <i class="uil uil-moon"></i>
-              <span class="link-name">Dark Mode</span>
-            </a>
-
-            <div class="mode-toggle">
-              <span class="switch"></span>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <section class="dashboard">
-      <div class="top">
-        <i class="uil uil-bars sidebar-toggle"></i>
-
-        <div class="search-box">
-          <i class="uil uil-search"></i>
-          <input type="text" placeholder="Search here..." />
-        </div>
-      </div>
-
-      <div class="dash-content">
-        <div class="overview">
-          <div class="title" id="overview">
-            <i class="uil uil-tachometer-fast-alt"></i>
-            <span class="text">Dashboard</span>
-          </div>
-          <div class="boxes">
-            <div class="box box2">
-              <i class="uil uil-thumbs-up"></i>
-              <span class="text">Overall Health</span>
-              <span class="number">Good</span>
-            </div>
-            <div class="box box2">
-              <i class="uil uil-map-marker"></i>
-              <span class="text">Location</span>
-              <span class="number">Mannarkkad, Palakkad</span>
-            </div>
-          </div>
-        </div>
-        <div class="analytics">
-          <div class="title">
+    <div class="menu-items">
+      <ul class="nav-links">
+        <li>
+          <a href="#overview">
+            <i class="uil uil-estate"></i>
+            <span class="link-name">Dahsboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#analytics">
             <i class="uil uil-chart"></i>
-            <span class="text" id="analytics">Analytics</span>
-          </div>
-        <div class="pie-chart" style="overflow-x:auto;">
-          <div class="pie animate no-round" style="--p:80;--c:orange;">Coolant Quality <br> 80%</div>
-          <div class="pie animate no-round" style="--p:80;--c:orange;">Oil Quality <br> 80%</div>
-          <div class="pie animate no-round" style="--p:80;--c:orange;">Oil Level <br> 80%</div>
-        </div>
-        </div>
-        <div class="myveh" id="myvehicle">
-          <div class="title">
+            <span class="link-name">Analytics</span>
+          </a>
+        </li>
+        <li id="vehicle">
+          <a href="#myvehicle">
             <i class="uil uil-car"></i>
-            <span class="text" id="analytics">My Vehicle Info</span>
-          </div>
-              <div style="overflow-x:auto;">
-                <table style="text-align: center;"> 
-                  <tr id="basic-info">
-                    <td class="data-list">Maker</td>
-                    <td class="data-list">Model</td>
-                  </tr>
-                  <tr id="oil-quality">
-                    <td class="data-list">Model</td>
-                    <td class="data-list">Jackson</td>
-                  </tr>
-                  <tr id="oil level">
-                    <td class="data-list">Year</td>
-                    <td class="data-list">Johnson</td>
-                  </tr>
-                  <tr id="vibration">
-                    <td class="data-list">Color</td>
-                    <td class="data-list">Johnson</td>
-                  </tr>
-                  <tr id="location">
-                    <td class="data-list">Owner Name</td>
-                    <td class="data-list">Johnson</td>
-                  </tr>
-                  <tr id="basic-info">
-                    <td class="data-list">Reg.No</td>
-                    <td class="data-list">Model</td>
-                  </tr>
-                  <tr id="coolant-quality">
-                    <td class="data-list">State of Reg</td>
-                    <td class="data-list">Smith</td>
-                  </tr>
-                  <tr id="oil-quality">
-                    <td class="data-list">VIN Number</td>
-                    <td class="data-list">Jackson</td>
-                  </tr>
-                  <tr id="oil level">
-                    <td class="data-list">Location</td>
-                    <td class="data-list">Johnson</td>
-                  </tr>
-                  <tr id="vibration">
-                    <td class="data-list">Ownership Status</td>
-                    <td class="data-list">Johnson</td>
-                  </tr>
-                  <tr id="location">
-                    <td class="data-list">Insurance Company</td>
-                    <td class="data-list">Johnson</td>
-                  </tr>
-                  <tr id="location">
-                    <td class="data-list">Number of Accidents</td>
-                    <td class="data-list">Johnson</td>
-                  </tr>
-                </table>
-              </div>
-          </div>
-        <div class="activity" id="activity">
-          <div class="title">
+            <span class="link-name">My Vehicle</span>
+          </a>
+        </li>
+        <li id="log">
+          <a href="#activity">
             <i class="uil uil-history"></i>
-            <span class="text">Recent Activity</span>
-          </div>
+            <span class="link-name"><button style="border: none; background-color: transparent;"></button>Recent
+              Activity</button></span>
+          </a>
+        </li>
+      </ul>
 
-          <div style="overflow-x:auto;">
-            <table style="text-align: center;">
-              <thead>
-                <tr>
-                  <th class="data-title">Sensor</th>
-                  <th class="data-title">Date&Time</th>
-                  <th class="data-title">Value</th>
-                  <th class="data-title">Status</th>
-                </tr>
-              </thead>
-              
-              <tr id="coolant-quality">
-                <td class="data-list">Jill</td>
-                <td class="data-list">Smith</td>
-                <td class="data-list">50</td>
-                <td class="data-list">50</td>
-              </tr>
-              <tr id="oil-quality">
-                <td class="data-list">Eve</td>
-                <td class="data-list">Jackson</td>
-                <td class="data-list">94</td>
-                <td class="data-list">94</td>
-              </tr>
-              <tr id="oil level">
-                <td class="data-list">Adam</td>
-                <td class="data-list">Johnson</td>
-                <td class="data-list">67</td>
-                <td class="data-list">67</td>
-              </tr>
-              <tr id="vibration">
-                <td class="data-list">Adam</td>
-                <td class="data-list">Johnson</td>
-                <td class="data-list">67</td>
-                <td class="data-list">67</td>
-              </tr>
-              <tr id="location">
-                <td class="data-list">Adam</td>
-                <td class="data-list">Johnson</td>
-                <td class="data-list">67</td>
-                <td class="data-list">67</td>
-              </tr>
-            </table>
-          </div>
-          
+      <ul class="logout-mode">
+        <li>
+          <a href="index.html">
+            <i class="uil uil-signout"></i>
+            <span class="link-name">Logout</span>
+          </a>
+        </li>
 
-          </div>
+        <li class="mode">
+          <a href="#">
+            <i class="uil uil-moon"></i>
+            <span class="link-name">Dark Mode</span>
+          </a>
 
+          <div class="mode-toggle">
+            <span class="switch"></span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="dashboard">
+    <div class="top">
+      <i class="uil uil-bars sidebar-toggle"></i>
+
+      <div class="search-box">
+        <i class="uil uil-search"></i>
+        <input type="text" placeholder="Search here..." />
+      </div>
+    </div>
+
+    <div class="dash-content">
+      <div class="overview">
+        <div class="title" id="overview">
+          <i class="uil uil-tachometer-fast-alt"></i>
+          <span class="text">Dashboard</span>
+        </div>
+        <div class="boxes">
+          <div class="box box2">
+            <i class="uil uil-thumbs-up"></i>
+            <span class="text">Overall Health</span>
+            <span class="number" id="veh-status"></span>
+          </div>
+          <div class="box box2">
+            <i class="uil uil-map-marker"></i>
+            <span class="text">Location</span>
+            <span class="number">Mannarkkad, Palakkad</span>
+          </div>
         </div>
       </div>
-    </section>
+      <div class="analytics">
+        <div class="title">
+          <i class="uil uil-chart"></i>
+          <span class="text" id="analytics">Analytics</span>
+        </div>
+        <div class="pie-chart" style="overflow-x:auto;">
+          <div id="pie-cool-lvl" class="pie animate no-round" style="--p:80;--c:#EAEA7F;">Coolant Quality <br> 80%</div>
+          <div id="pie-oil-qua" class="pie animate no-round" style="--p:80;--c:#EAEA7F;">Oil Quality <br> 80%</div>
+          <div id="pie-oil-lvl" class="pie animate no-round" style="--p:80;--c:#EAEA7F;">Oil Level <br> 80%</div>
+        </div>
+      </div>
+      <div class="myveh" id="myvehicle">
+        <div class="title">
+          <i class="uil uil-car"></i>
+          <span class="text" id="analytics">My Vehicle Info</span>
+          <button type="button"  id="down1"  style="border-radius: 50%;margin:2%;border: none;"><i class="uil uil-download-alt"></i></button>
+        </div>
+        <div style="overflow-x:auto; width: 60%;">
+          <table style="text-align: center;" id="table1">
+            <tr id="basic-info">
+              <td class="data-list">Maker</td>
+              <td class="data-list">Honda</td>
+            </tr>
+            <tr id="oil-quality">
+              <td class="data-list">Model</td>
+              <td class="data-list">City</td>
+            </tr>
+            <tr id="oil level">
+              <td class="data-list">Year</td>
+              <td class="data-list">2017</td>
+            </tr>
+            <tr id="vibration">
+              <td class="data-list">Color</td>
+              <td class="data-list">Black</td>
+            </tr>
+            <tr id="location">
+              <td class="data-list">Owner Name</td>
+              <td class="data-list">Sajeev</td>
+            </tr>
+            <tr id="basic-info">
+              <td class="data-list">Reg.No</td>
+              <td class="data-list">KL-50-F-7922</td>
+            </tr>
+            <tr id="coolant-quality">
+              <td class="data-list">State of Reg</td>
+              <td class="data-list">Kerala</td>
+            </tr>
+            <tr id="oil-quality">
+              <td class="data-list">VIN Number</td>
+              <td class="data-list">1HGBH41JXMN109186</td>
+            </tr>
+            <tr id="location">
+              <td class="data-list">Insurance Company</td>
+              <td class="data-list">National Insurance</td> 
+            <tr id="oil level">
+              <td class="data-list">Location</td>
+              <td id="loc-inf" class="data-list" style="color: rgb(13, 228, 45);">41°24'12.2"N</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="activity" id="activity">
+        <div class="title">
+          <i class="uil uil-history"></i>
+          <span class="text">Recent Activity</span>
+          <button type="button" id="down2"  style="border-radius: 50%;margin:2%;border: none;"><i class="uil uil-download-alt"></i></button>
+        </div>
 
-    <script src="dash.js"></script>
-  </body>
+        <div style="overflow-x:auto;">
+          <table style="text-align: center;" id="table2">
+            <thead>
+              <tr>
+                <th class="data-title">Sensor</th>
+                <th class="data-title">Date&Time</th>
+                <th class="data-title">Value</th>
+                <th class="data-title">Status</th>
+              </tr>
+            </thead>
+
+            <tr id="coolant-quality">
+              <td class="data-list">Oil Level</td>
+              <td class="data-list date"></td>
+              <td class="data-list new"></td>
+              <td class="data-list">50</td>
+            </tr>
+            <tr id="oil-quality">
+              <td class="data-list">Oil Quality</td>
+              <td class="data-list date"></td>
+              <td class="data-list new"></td>
+              <td class="data-list">94</td>
+            </tr>
+            <tr id="oil level">
+              <td class="data-list">Coolant Level</td>
+              <td class="data-list date"></td>
+              <td class="data-list new"></td>
+              <td class="data-list">67</td>
+            </tr>
+            <tr id="vibration">
+              <td class="data-list">Pressure</td>
+              <td class="data-list date"></td>
+              <td class="data-list new"></td>
+              <td class="data-list">67</td>
+            </tr>
+          </table>
+        </div>
+
+
+      </div>
+
+    </div>
+    </div>
+  </section>
+  <script src="dash.js"></script>
+
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js';
+    import { getDatabase, ref, onValue,set,serverTimestamp} from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-database.js'
+
+    const firebaseApp = initializeApp({
+      apiKey: "AIzaSyCpvYXGtevmREB1kwZV0n7jf_yYvE7iWTM",
+      authDomain: "auto-doctor-7cd33.firebaseapp.com",
+      databaseURL: "https://auto-doctor-7cd33-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "auto-doctor-7cd33",
+      storageBucket: "auto-doctor-7cd33.appspot.com",
+      messagingSenderId: "812135743704",
+      appId: "1:812135743704:web:754e4ca697ca38c98057ad",
+      measurementId: "G-T8R2C1L04G"
+    });
+    const db = getDatabase();
+    const reference = ref(db, 'user1/sensor_data');
+    
+    onValue(reference, (snapshot) => {
+      const data =snapshot.val();
+      var today = new Date();
+      var date = today.getDate()+'/'+today.getMonth()+'/'+today.getFullYear()+' , '+today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
+      var coolant_level = data.coolant_level;
+      var location = data.location;
+      var oil_level = data.oil_level;
+      var oil_quality = data.oil_quality;
+      var pressure = data.Pressure;
+      document.getElementById("loc-inf").innerText = location;
+      var classDate = document.getElementsByClassName("data-list date")
+      var classData = document.getElementsByClassName("data-list new")
+    
+      var sensorData = [oil_level,oil_quality,coolant_level,pressure]
+      for (let i = 0 ; i < classDate.length ; i++){
+        classDate[i].innerText = date
+        classData[i].innerHTML = sensorData[i]
+      }
+
+      var pieOilLvl = document.getElementById("pie-oil-lvl")
+      var pieOilQua = document.getElementById("pie-oil-qua")
+      var pieCoolLvl  = document.getElementById("pie-cool-lvl")
+      var status = document.getElementById("veh-status")
+
+      pieOilLvl.innerHTML = `Oil Level <br> ${oil_level}%`
+      pieOilLvl.setAttribute("style",`--p:${oil_level}`)
+      pieOilLvl.setAttribute("style",`--p:${oil_level}`)
+
+      pieOilQua.innerHTML = `Oil Quality <br> ${oil_quality}%`
+      pieOilQua.setAttribute("style",`--p:${oil_quality}`)
+
+      pieCoolLvl.innerHTML = `Coolant Quality <br> ${coolant_level}%`
+      pieCoolLvl.setAttribute("style",`--p:${coolant_level}`)
+      
+
+      if (oil_level >70 && oil_quality > 70 && coolant_level >70){
+          status.innerText = "Excellent"
+      } 
+      else if (oil_level >30 && oil_quality > 30 && coolant_level >30){
+        status.innerText = "Average"
+      }
+      else{
+        status.innerText = "Poor"
+      }
+
+      
+
+    },
+
+  )
+
+  </script>
+</body>
+
 </html>
