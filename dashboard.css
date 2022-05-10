@@ -166,6 +166,13 @@ body.dark li a:hover:before {
     transition: var(--tran-05);
 }
 
+#expand:hover i,#dy-link:hover i{
+    color:var(--primary-color) ;
+}
+body.dark #expand:hover i,#dy-link:hover i{
+    color: var(--text-color);
+}
+
 nav.close li a .link-name {
     opacity: 0;
     pointer-events: none;

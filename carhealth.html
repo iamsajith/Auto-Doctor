@@ -93,14 +93,18 @@
         </div>
         <div class="boxes">
           <div class="box box2">
-            <i class="uil uil-thumbs-up"></i>
+            <i class="uil uil-heart-medical"></i>
             <span class="text">Overall Health</span>
             <span class="number" id="veh-status"></span>
+            <button id="more" style="border:none;background-color: transparent;">
+            <a href="#activity" id="expand"><i class="uil uil-angle-down"></i></a>
+            </button>
           </div>
           <div class="box box2">
             <i class="uil uil-map-marker"></i>
             <span class="text">Location</span>
-            <span class="number">Mannarkkad, Palakkad</span>
+            <span class="number" id="coordinates"></span>
+            <a href="#" target="_blank" id="dy-link"><i class="uil uil-corner-up-right-alt"></i></a>
           </div>
         </div>
       </div>
@@ -163,10 +167,6 @@
             <tr id="location">
               <td class="data-list">Insurance Company</td>
               <td class="data-list">National Insurance</td> 
-            <tr id="oil level">
-              <td class="data-list">Location</td>
-              <td id="loc-inf" class="data-list" style="color: rgb(13, 228, 45);">41°24'12.2"N</td>
-            </tr>
           </table>
         </div>
       </div>
@@ -248,16 +248,22 @@
       var location = data.location;
       var oil_level = data.oil_level;
       var oil_quality = data.oil_quality;
-      var pressure = data.Pressure;
-      document.getElementById("loc-inf").innerText = location;
+      var accident = data.Pressure;
+
+
+      document.getElementById("coordinates").innerText = location;
+
+
+      document.getElementById("dy-link").setAttribute("href",`https://www.google.com/maps/dir//${location}`)
+
       var classDate = document.getElementsByClassName("data-list date")
       var classData = document.getElementsByClassName("data-list new")
       var statusData = document.getElementsByClassName("data-list status")
     
       var sensorData = [oil_level,oil_quality,coolant_level]
-      for (let i = 0 ; i < classDate.length ; i++){
+      for (let i = 0 ; i < sensorData.length ; i++){
         classDate[i].innerText = date
-        classData[i].innerHTML = sensorData[i]
+        classData[i].innerHTML = sensorData[i]+'%'
         if (sensorData[i] >70){
           statusData[i].innerText = "High"
           statusData[i].style.color = "rgb(13,228,45)"
@@ -272,6 +278,18 @@
           statusData[i].style.color = "rgb(204,51,0)"
         }
       }
+      classDate[3].innerHTML = date
+      if (accident==true){
+        classData[3].innerHTML = "True"
+        statusData[3].innerHTML = "Accident"
+        statusData[3].style.color = "rgb(204,51,0)"
+      }
+      else{
+        classData[3].innerHTML = "False"
+        statusData[3].innerHTML = "Accident"
+        statusData[3].style.color = "rgb(204,51,0)"
+      }
+
       
 
       var pieOilLvl = document.getElementById("pie-oil-lvl")
@@ -290,6 +308,10 @@
       pieCoolLvl.setAttribute("style",`--p:${coolant_level}`)
       
 
+
+//Overall Health Status
+
+    if(accident != true){
       if (oil_level >70 && oil_quality > 70 && coolant_level >70){
           status.innerText = "Excellent"
       } 
@@ -298,11 +320,15 @@
       }
       else{
         status.innerText = "Poor"
-      }
+      }     
 
-      
+    }
+    else{
+      status.innerText = "On an accident"
+    }},
 
-    },
+
+
 
   )
 

@@ -39,6 +39,7 @@ var display2 = ()=>{
     document.getElementById("myvehicle").className="myveh new"
     
 }
+document.getElementById("more").addEventListener("click",display1)
 document.getElementById("log").addEventListener("click", display1);
 document.getElementById("vehicle").addEventListener("click",display2);
 
